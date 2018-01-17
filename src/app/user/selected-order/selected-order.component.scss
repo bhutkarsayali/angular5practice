@@ -1,0 +1,30 @@
+.order-details {
+    border:1px solid rgb(54, 97, 218);
+    border-radius: 5px;
+    .order-detail-header {
+        background: rgb(54, 97, 218);
+        color: #fff;
+        height: 40px;
+        h6 {
+            line-height: 40px;
+            margin-bottom: 0;
+        }
+        .fa-close {
+            line-height: 40px;
+            cursor: pointer;
+        }
+        
+    }
+    .order-detail-body {
+        height: auto;
+        padding: 20px 20px 10px 20px;
+        .order-detail-blocks {
+            margin-bottom: 10px;
+            background:  rgba(54, 98, 218, 0.486);
+            height: 40px;
+            p {
+                line-height: 40px;
+            }
+        }
+    }
+}

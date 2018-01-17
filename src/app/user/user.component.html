@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <h4>List of orders placed</h4>
+                <div class="col-md-12">
+                <div class="row customer-order-list">
+                    <div class="col-md-12 customer-orders" [routerLink]="['/user-home/selected-order', order.orderId, order.product, order.quantity]" *ngFor="let order of myService.getOrderListForCustomer(myService.customerID)">
+                        <div class="customer-order-block">
+                            <h6 class="pull-left">Order Id : #{{ order.orderId }}</h6>
+                            <i class="fa fa-angle-right pull-right"></i>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="inner-outlet">
+                <router-outlet></router-outlet>
+            </div>
+        </div>        
+    </div>
+</div>
+

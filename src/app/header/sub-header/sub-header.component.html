@@ -1,0 +1,30 @@
+<header *ngIf="myService.showSubheader">
+    <div class="container-fluid">
+        <!-- Welcome message shown when ustomer logs inn -->
+        <div class="row customer" *ngIf="myService.isUserCustomer">
+        <div class="col-md-6">
+            <h3>Welcome {{ myService.customerName }}!</h3>
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="btn add-new-order-btn float-right" (click)="redirectToAddOrder()">Add New Order</button>
+        </div>
+        </div>
+
+        <!-- Add new order message shown when customer clicks on: add new order -->
+        <div class="row customer-new-order" *ngIf="myService.showAddNewOrder">
+            <div class="col-md-6">
+                <h3>Add New Order</h3>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-link cancel-order-btn float-right" (click)="redirectToAddUserHome()">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Welcome message shown when Admin logs inn -->
+        <!-- <div class="row admin" *ngIf="myService.isUserAdmin">
+            <div class="col-md-12">
+                <h3>Welcome Admin</h3>
+            </div>
+        </div> -->
+    </div>
+</header>

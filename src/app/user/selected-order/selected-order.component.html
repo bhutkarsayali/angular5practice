@@ -1,0 +1,18 @@
+<h4>Selected order details</h4>
+<div class="col-md-12 order-details">
+    <div class="row order-detail-header">
+        <div class="col-md-12">
+            <h6 class="pull-left">Order Id : {{ selectedOrderId }} </h6>
+            <i class="fa fa-close pull-right" (click)="closeOrderDetails()"></i>
+        </div>
+    </div>
+    <div class="row order-detail-body">
+        <div class="col-md-12 order-detail-blocks">
+            <p>Product : {{  myService.getProductName(productId) }}</p>
+        </div>
+        <div class="col-md-12 order-detail-blocks">
+            <p>Quantity : {{ quantity }}</p>
+        </div>
+    </div>
+</div>
+

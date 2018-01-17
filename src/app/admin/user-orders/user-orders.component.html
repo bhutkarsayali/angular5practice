@@ -1,0 +1,25 @@
+<div class="gotodashboard">
+    <button type="button" class="btn btn-link" (click)="redirectToAdminHome()">
+        <i class="fa fa-angle-left"></i>
+        <span>Dashboard</span>
+    </button>
+</div>
+<div class="container user-orders">
+    <h4>Orders Placed By Customer :: Customer ID: {{myService.clickedCustomerId}} and Customer Name: {{myService.getCustomerName(myService.clickedCustomerId)}}</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Product ID</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of myService.getOrderListForCustomer(myService.clickedCustomerId)">
+                <td>#{{ order.orderId }}</td>
+                <td>{{ myService.getProductName(order.product) }}</td>
+                <td>{{ order.quantity }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

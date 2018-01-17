@@ -1,0 +1,32 @@
+.customer-order-list{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    min-height: 40px;
+    height: auto;
+    .customer-orders {
+        border-bottom: 1px solid lightgray;
+        cursor: pointer;
+        padding: 0;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:focus {
+            outline: none;
+            background: rgb(54, 97, 218);
+            color: #fff;
+        }
+        .customer-order-block {
+            height: 40px;
+            padding: 0 15px;
+            h6 {
+                font-weight: bold;
+                padding: 10px 0;
+                margin-bottom: 0;
+            }
+            .fa-angle-right {
+                font-size: 24px;
+                padding: 7px 0;
+            }
+        } 
+    }
+}

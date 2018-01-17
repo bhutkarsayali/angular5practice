@@ -1,0 +1,31 @@
+.gotodashboard {
+    .fa-angle-left{
+        font-size: 20px;
+    }
+}
+.customer-list {
+    h4 {
+        text-align: center;
+    }
+    .customer-block {
+        border: 1px solid lightgrey;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 0 0 30px 0;
+        .customer-name {
+            background:  darkblue;
+            color: #fff;
+            height: 40px;
+            margin-bottom: 10px;
+            padding: 10px;
+            line-height: 20px;
+        }
+        .customer-id {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

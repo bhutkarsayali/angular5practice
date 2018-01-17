@@ -1,0 +1,29 @@
+[{
+    "customerId":"c1",
+    "name":"customer #1",
+    "password":"123"
+},{
+    "customerId":"c2",
+    "name":"customer #2",
+    "password":"123"
+},{
+    "customerId":"c3",
+    "name":"customer #3",
+    "password":"123"
+},{
+    "customerId":"c4",
+    "name":"customer #4",
+    "password":"123"
+},{
+    "customerId":"c5",
+    "name":"customer #5",
+    "password":"123"
+},{
+    "customerId":"c6",
+    "name":"customer #6",
+    "password":"123"
+},{
+    "customerId":"admin",
+    "name":"Admin",
+    "password":"567"
+}]
