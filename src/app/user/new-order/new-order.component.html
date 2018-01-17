@@ -1,0 +1,41 @@
+<div class="container add-new-product">
+    <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+            <form>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="col-md-12">
+                            <label for="select-product">Select Product</label>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="d-inline-block select-product" ngbDropdown #myDrop="ngbDropdown">
+                                <button type="button" class="select-product-input form-control" id="dropdownManual" ngbDropdownToggle>
+                                    <span *ngIf="!selectedItem">Select Product</span> 
+                                    <span *ngIf="selectedItem">{{ selectedItem.name }}</span>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownManual">
+                                    <button type="button" class="dropdown-item"  *ngFor="let product of myService.allProductList" (click)="setSelectedProduct(product)">{{ product.name }}</button>
+                                </div>
+                            </div>                               
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="col-md-12">
+                            <label for="quantity">Quantity</label>
+                        </div>
+                        <div class="col-md-12">                                
+                            <input type="number" class="form-control" [(ngModel)]="prodQuantity" name="quantity" placeholder="quantity">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary" (click)="addOrderAndRedirect()">Submit</button>
+                    </div>
+                </div> 
+            </form>
+        </div>
+    
+        <div class="col-md-2"></div>
+    </div>
+</div>

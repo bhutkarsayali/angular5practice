@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="login">
+        <h2>Welcome To Order App! </h2>
+        <div class="login-form-block">
+            <div class="user-image">
+                <img src="../../assets/user1.png"/>
+            </div>
+            <p class="error-msg" *ngIf="myService.displayError()">Please enter valid credentials</p>
+            <form>
+                <input #customerID type="text" placeholder="Username" name="uname" required>
+            
+                <input #password type="password" placeholder="Password" name="psw" required>
+            
+                <button class="btn btn-success btn-block login-btn" (click) = "validateLoginDetails(customerID.value, password.value)" type="submit">Login</button>
+            </form>
+            <p class="bottom-text">Not Registered ? <span class="text-success">Create an account</span></p>
+        </div>
+    </div>
+</div>

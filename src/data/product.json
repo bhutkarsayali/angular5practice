@@ -1,0 +1,19 @@
+[{
+    "productId" : "p1",
+    "name":"LG TV"
+},{
+    "productId" : "p2",
+    "name":"SONY TV"
+},{
+    "productId" : "p3",
+    "name":"SAMSUNG TV"
+},{
+    "productId" : "p4",
+    "name":"IFB Microwave"
+},{
+    "productId" : "p5",
+    "name":"Whirpool Fridge"
+},{
+    "productId" : "p6",
+    "name":"Godrej Fridge"
+}]

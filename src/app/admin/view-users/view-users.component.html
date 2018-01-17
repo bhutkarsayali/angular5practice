@@ -1,0 +1,22 @@
+<div class="gotodashboard">
+    <button type="button" class="btn btn-link" (click)="redirectToAdminHome()">
+        <i class="fa fa-angle-left"></i>
+        <span>Dashboard</span>
+    </button>
+</div>
+<div class="container customer-list">
+    <h4>Customer List</h4>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let cust of myService.allCustomerList">
+            <div class="customer-block" *ngIf="cust.customerId !== 'admin'">
+                <div class="customer-name">
+                    <span>Name : {{ cust.name }}</span>
+                </div>
+                <div class="customer-id">
+                    <span>Customer Id : {{ cust.customerId }}</span>
+                </div>
+                <button type="button" class="btn btn-primary" (click)="redirectToUserOrders(cust.customerId)">Orders Placed : {{myService.getOrderCountForCustomer(cust.customerId)}}</button>
+            </div>
+        </div>
+    </div>
+</div>
